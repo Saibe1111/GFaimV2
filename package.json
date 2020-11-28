@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/Saibe1111/GFaimV2/issues"
   },
-  "homepage": "https://github.com/Saibe1111/GFaimV2#readme"
+  "homepage": "https://github.com/Saibe1111/GFaimV2#readme",
+  "dependencies": {
+  }
 }
