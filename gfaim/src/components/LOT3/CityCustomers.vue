@@ -1,6 +1,6 @@
 <template>
   <div id="watch-example">
-    <h1>{{ tittle }}</h1>
+    <h1>{{ title }}</h1>
     <pie-chart class="chart" :data="test"></pie-chart>
   </div>
 </template>
@@ -12,7 +12,7 @@ const {IP, PORT} = require('../../assets/config.json');
 export default {
   name: "Chart",
   props: {
-    tittle: String,
+    title: String,
   },
   data() {
     return {

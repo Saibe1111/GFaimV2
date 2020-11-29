@@ -11,7 +11,7 @@ const {IP, PORT} = require('../../../assets/config.json');
 export default {
   name: "Chart",
   props: {
-    tittle: String,
+    title: String,
   },
   data() {
     return {

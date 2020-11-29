@@ -1,6 +1,6 @@
 <template>
   <div id="watch-example">
-    <h1>{{ tittle }}</h1>
+    <h1>{{ title }}</h1>
     <column-chart height="400px" class="chart" :data="test" suffix=" €"></column-chart>
   </div>
 </template>
@@ -12,7 +12,7 @@ const {IP, PORT} = require('../../assets/config.json');
 export default {
   name: "MoyenTicket",
   props: {
-    tittle: String,
+    title: String,
   },
   data() {
     return {

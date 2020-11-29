@@ -1,6 +1,6 @@
 <template>
   <div id="watch-example">
-    <h1>{{ tittle }}</h1>
+    <h1>{{ title }}</h1>
     <h3>BIO</h3>
     <bio />
     <h3>VEGAN</h3>
@@ -22,7 +22,7 @@ import halal from './CustomerSpendingCategorys/halal.vue';
 export default {
   name: "Chart",
   props: {
-    tittle: String,
+    title: String,
   },
   components: {
     bio,

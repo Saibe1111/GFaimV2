@@ -33,14 +33,14 @@
             Graphiques
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#turnover">Evolution du chiffre d’affaire</a>
+            <a class="dropdown-item" href="#turnover">Évolution du chiffre d’affaires</a>
             <a class="dropdown-item" href="#averageSpend">Prix moyen des tickets de caisse</a>
-            <a class="dropdown-item" href="#turnoverByCategory">Evolution du chiffre d’affaire par catégorie</a>
+            <a class="dropdown-item" href="#turnoverByCategory">Évolution du chiffre d’affaire par catégorie</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#averageSpendCustomer">Prix moyen des tickets de caisse par client</a>
             <a class="dropdown-item" href="#customerSpendingCategory">Dépense mensuelle par client par catégorie</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#ageCustomers">Age des clients</a>
+            <a class="dropdown-item" href="#ageCustomers">Âge des clients</a>
             <a class="dropdown-item" href="#cityCustomers">Provenance des clients</a>
             <a class="dropdown-item" href="#ticketDays">Nombre de ticket par jours de la semaine par mois</a>
           </div>

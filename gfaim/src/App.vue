@@ -2,45 +2,53 @@
   <div id="app">
     <navbar />
 
-    <turnover id="turnover" class="chart" tittle="Evolution du chiffre d’affaire" />
+    <turnover
+      id="turnover"
+      class="chart"
+      title="Évolution du chiffre d’affaires"
+    />
     <hr />
     <averageSpend
       id="averageSpend"
       class="chart"
-      tittle="Prix moyen des tickets de caisse"
+      title="Prix moyen des tickets de caisse"
     />
     <hr />
     <turnoverByCategory
       id="turnoverByCategory"
       class="chart"
-      tittle="Evolution du chiffre d’affaire par catégorie"
+      title="Évolution du chiffre d’affaires par catégorie"
     />
     <hr />
     <averageSpendCustomer
       id="averageSpendCustomer"
       class="chart"
-      tittle="Prix moyen des tickets de caisse par client"
+      title="Prix moyen des tickets de caisse par client"
     />
     <hr />
     <customerSpendingCategory
       id="customerSpendingCategory"
       class="chart"
-      tittle="Dépense mensuelle par client par catégorie"
+      title="Dépense mensuelle par client par catégorie"
     />
     <hr />
 
-    <ageCustomers id="ageCustomers" class="chart" tittle="Age des clients" />
+    <ageCustomers
+      id="ageCustomers"
+      class="chart"
+      title="Âge des clients"
+    />
     <hr />
     <cityCustomers
       id="cityCustomers"
       class="chart"
-      tittle="Provenance des clients"
+      title="Provenance des clients"
     />
     <hr />
     <ticketDays
       id="ticketDays"
       class="chart"
-      tittle="Nombre de ticket par jours de la semaine par mois"
+      title="Nombre de tickets par jour de la semaine par mois"
     />
     <hr />
 
