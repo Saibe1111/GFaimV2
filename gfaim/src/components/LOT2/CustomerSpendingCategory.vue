@@ -1,14 +1,26 @@
 <template>
   <div id="watch-example">
     <h1>{{ title }}</h1>
-    <h3>BIO</h3>
-    <bio />
-    <h3>VEGAN</h3>
-    <vegan />
-    <h3>CASHER</h3>
-    <casher />
-    <h3>HALAL</h3>
-    <halal />
+    <el-tabs v-model="activeName" @tab-click="handleClick">
+      <el-tab-pane label="BIO" name="bio">
+        <h3>BIO</h3>
+        <bio />
+      </el-tab-pane>
+      <el-tab-pane label="VEGAN" name="vegan">
+        <h3>VEGAN</h3>
+        <vegan />
+      </el-tab-pane>
+      <el-tab-pane label="CASHER" name="casher">
+        <h3>CASHER</h3>
+        <casher />
+      </el-tab-pane>
+      <el-tab-pane label="HALAL" name="halal">
+        <h3>HALAL</h3>
+        <halal />
+      </el-tab-pane>
+    </el-tabs>
+        
+        
   </div>
 </template>
 
@@ -30,6 +42,16 @@ export default {
     casher,
     halal
   },
+  data() {
+    return {
+      activeName: 'bio'
+    };
+  },
+  methods: {
+    handleClick(tab, event) {
+      console.log(tab, event);
+    }
+  }
 };
 </script>
 
