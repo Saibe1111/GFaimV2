@@ -1,0 +1,10 @@
+{
+    "IP":{
+        "client":"localhost",
+        "api":"localhost"
+    },
+    "PORT":{
+        "client":"8080",
+        "api":"9000"
+    }
+}

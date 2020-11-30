@@ -8,7 +8,7 @@
 <script>
 
 const axios = require("axios");
-const {IP, PORT} = require('../../assets/config.json');
+const {IP, PORT} = require('../../../../config.json');
 
 export default {
   name: "Chart",

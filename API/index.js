@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const { readdirSync } = require('fs');
 const server = http.createServer(app);
-const { IP, PORT } = require('../gfaim/src/assets/config.json');
+const { IP, PORT } = require('../config.json');
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', `http://${IP.client}:${PORT.client}`);
