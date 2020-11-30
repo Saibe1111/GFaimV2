@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gfaim:build": "cd gfaim && npm run build",
+    "gfaim:serve": "cd gfaim && npm run serve",
+    "gfaim:lint": "cd gfaim && npm run lint",
+    "api:start": "cd API && npm run start",
+    "api:test": "cd API && npm run test",
+    "all:prod": "run-p api:start gfaim:build",
+    "all:dev": "run-p api:start gfaim:serve"
   },
   "repository": {
     "type": "git",
@@ -16,6 +23,8 @@
     "url": "https://github.com/Saibe1111/GFaimV2/issues"
   },
   "homepage": "https://github.com/Saibe1111/GFaimV2#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
