@@ -1,31 +1,36 @@
+<!-- https://element.eleme.io/#/fr-FR/component/dialog#personalisation -->
+
 <template>
-  <div class="box">
-    
-    <h1>Ajout CSV</h1>
-
-    <input
-      class=""
-      type="file"
-      id="file"
-      ref="file"
-      accept=".csv"
-      v-on:change="handleFileUpload()"
-    />
-   
-    
-    <br />
-    <select id="monselect">
-      <option value="">--Choisir le type de fichier--</option>
-      <option value="product">Produit</option>
-      <option value="ticket">Ticket</option>
-      <option value="ticketdetail">TicketDetail</option>
-      <option value="category">Categorie</option>
-      <option value="loyaltycard">CarteFidelite</option>
-    </select>
-    <br>
-
-    <button  v-on:click="submitFile()">Envoyer</button>
-  </div>
+  <el-dialog title="Ajout CSV" :visible.sync="dialogVisible">
+    <el-form :model="form">
+      <el-form-item>
+        <el-select v-model="form.fileType" placeholder="Choisir le type de fichier">
+          <el-option key="product" label="Produit" value="product"></el-option>
+          <el-option key="ticket" label="Ticket" value="ticket"></el-option>
+          <el-option key="ticketdetail" label="TicketDetail" value="ticketdetail"></el-option>
+          <el-option key="category" label="Categorie" value="category"></el-option>
+          <el-option key="loyaltycard" label="CarteFidelite" value="loyaltycard"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item>
+        <el-upload
+          class="upload"
+          drag
+          action="https://jsonplaceholder.typicode.com/posts/"
+          :auto-upload="false"
+          :file-list="form.fileList"
+          multiple>
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">Déposer des fichiers ou <em>cliquez ici</em></div>
+          <div class="el-upload__tip" slot="tip">fichiers csv</div>
+        </el-upload>
+      </el-form-item>
+    </el-form>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="dialogVisible = false">Annuler</el-button>
+      <el-button @click="dialogVisible = false" type="primary">Confirmer</el-button>
+    </span>
+  </el-dialog>
 </template>
 
 <script>
@@ -36,10 +41,7 @@ export default {
 
   name: "CSV",
   methods: {
-    handleFileUpload() {
-      this.file = this.$refs.file.files[0];
-    },
-    submitFile() {
+    submitFile() { // TODO
       const valueType = document.getElementById("monselect").value;
       let formData = new FormData();
       formData.append("file", this.file);
@@ -57,10 +59,17 @@ export default {
           console.log("FAILURE!!");
         });
     },
+    openDialog: function() {
+      this.dialogVisible = true;
+    },
   },
   data() {
     return {
-      file: "",
+      dialogVisible: false,
+      form: {
+        fileType: '',
+        fileList: [],
+      },
     };
   },
 };
@@ -70,7 +79,7 @@ export default {
 <style>
 .box {
   margin-top: 50px;
-  background-color: grey;
+  background-color: rgb(219, 219, 219);
   border-color: black;
   margin-left: auto;
   margin-right: auto;

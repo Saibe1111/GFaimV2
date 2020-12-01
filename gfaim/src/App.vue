@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <navbar />
-
+    <navbar @open-csv-dialog="openCSVDialog" />
+    
+    <csv id="CSV" ref="csvDialog" />
+    
     <turnover
       id="turnover"
       class="chart"
@@ -50,9 +52,6 @@
       class="chart"
       title="Nombre de tickets par jour de la semaine par mois"
     />
-    <hr />
-
-    <csv id="CSV" />
   </div>
 </template>
 
@@ -91,6 +90,11 @@ export default {
     cityCustomers,
     ticketDays,
   },
+  methods: {
+    openCSVDialog: function() {
+      this.$refs.csvDialog.openDialog();
+    }
+  }
 };
 </script>
 

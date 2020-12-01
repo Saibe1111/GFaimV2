@@ -46,7 +46,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" for="file" href="#CSV">Ajout fichier</a>
+          <a class="nav-link" href="#" @click="openDialog">Ajout fichier</a>
         </li>
       </ul>
     </div>
@@ -57,13 +57,20 @@
 export default {
   name: "Navbar",
   data: function() {
-  return {
-    charts: [
-      { ref:"",
-      title:"" }
-    ]
-  };
-}
+    return {
+      charts: [
+        {
+          ref:"",
+          title:""
+        },
+      ]
+    }
+  },
+  methods: {
+    openDialog: function() {
+      this.$emit('open-csv-dialog');
+    }
+  }
 }
 </script>
 
