@@ -6,9 +6,9 @@
 </template>
 
 <script>
-const axios = require("axios");
+import axios from 'axios';
 
-const {IP, PORT} = require('../../../../config.json');
+import { IP, PORT } from '../../../../config.json';
 
 export default {
   name: "Chart",

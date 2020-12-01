@@ -29,9 +29,8 @@
 </template>
 
 <script>
-const axios = require("axios");
-
-const {IP, PORT} = require('../../../config.json');
+import axios from 'axios';
+import { IP, PORT } from '../../../config.json';
 
 export default {
 
